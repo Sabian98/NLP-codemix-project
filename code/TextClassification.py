@@ -9,7 +9,6 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 from torch.utils.data import TensorDataset
 from transformers import get_linear_schedule_with_warmup
-from transformers import RobertaTokenizer, RobertaForSequenceClassification
 from torch.utils.data import DataLoader, RandomSampler, SequentialSampler
 from transformers import BertTokenizer, BertForSequenceClassification, AdamW, BertConfig
 
@@ -23,7 +22,6 @@ else:
 
 # training
 # tokenizer = BertTokenizer.from_pretrained('bert-base-multilingual-cased')
-# tokenizer = RobertaTokenizer.from_pretrained('sentence-transformers/xlm-r-100langs-bert-base-nli-stsb-mean-tokens')
 
 # testing
 # tokenizer = BertTokenizer.from_pretrained('./model_mBert')
@@ -143,13 +141,6 @@ prediction_dataloader = DataLoader(
 # training
 # model = BertForSequenceClassification.from_pretrained(
 #     "bert-base-multilingual-cased",
-#     num_labels = 3, 
-#     output_attentions = False,
-#     output_hidden_states = False,
-# )
-
-# model = RobertaForSequenceClassification.from_pretrained(
-#     "sentence-transformers/xlm-r-100langs-bert-base-nli-stsb-mean-tokens",
 #     num_labels = 3, 
 #     output_attentions = False,
 #     output_hidden_states = False,
@@ -357,4 +348,4 @@ def testing():
 
 # training()
 
-testing()
+# testing()
